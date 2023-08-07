@@ -1,0 +1,94 @@
+/*--CSS reset--*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+
+/*--header--*/
+.container_menu_bar{
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    background: #AA0601 0% 0% no-repeat padding-box;
+}
+
+.container_menu_inner{
+    margin: 0 auto;
+    max-width: 67.5%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 80px;
+}
+
+.menu_list{
+    width: 492px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_list_link{
+    text-align: left;
+    font: normal 20px 'Noto Sans TC' ;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+}
+
+
+/*-- main --*/
