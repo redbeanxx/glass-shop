@@ -92,3 +92,165 @@ img{
 
 
 /*-- main --*/
+/*banner*/
+.banner{
+    height: 787px;
+    background-size:cover;
+    background-position:center center;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    z-index: -1;
+}
+
+.banner_detail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 16%;
+    padding-top: 296px;
+}
+
+.banner_detail p{
+    font: normal 36px 'Noto Sans TC' ;
+    color: #650300;
+    text-align: right;
+}
+
+.banner_detail h1{
+    font: bold 64px 'Noto Sans TC' ;
+    color: #650300;
+    text-align: right;
+}
+
+.banner a{
+    display: block;
+    margin-top: 4px;
+    width: 104px;
+    height: 41px;
+    background-color: #AA0601; 
+
+    font: normal 20px 'Noto Sans TC' ;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 41px;
+    text-align: center;
+}
+
+ /*intro*/
+
+.intro{
+    background-color: #FBF2F2;
+    background-size:cover;
+    z-index: -1;
+}
+
+h2{
+    font: bold 48px 'Noto Sans TC' ;
+    color: #650300;
+    text-align: center;
+    line-height: 72px;
+    padding-top: 80px;
+    padding-bottom: 24px;
+}
+
+.intro ul{
+    display: flex;
+    justify-content: center;
+}
+
+.intro_item{
+    width: 306px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.intro_item img{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+}
+
+.intro_item h3{
+    text-align: center;
+    font: bold 24px 'Noto Sans TC' ;
+    color: #650300;
+    margin-bottom: 8px;
+
+}
+
+.intro_item p{
+    font: normal 16px 'Noto Sans TC' ;
+    text-align: left;
+    margin-bottom: 80px;
+}
+
+
+ /*classic_product*/
+
+ .classic_product ul{
+    display: flex;
+    justify-content: center;
+}
+ 
+.classic_product_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.classic_product img{
+    margin-bottom: 8px;
+    max-width: 416px;
+    min-width: 208px;
+}
+
+.classic_product a{
+    text-align: center;
+    font: Italic 48px 'Roboto' ;
+    font-weight: 700;
+    color: #AA0601;
+    margin-bottom: 80px;
+    text-decoration: none;
+}
+
+/*designer_product*/
+
+.designer_product{
+    height: 608px;
+    background-size:cover;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+    z-index: -1;
+}
+
+.designer_product h2{
+    color: #fff;
+}
+
+.designer_product ul{
+    display: flex;
+    justify-content: center;
+}
+
+.designer_product_item img{
+    display:block;
+    max-width: 648px;
+}
+
+.designer_product_item a{
+    display: block;
+    max-width: 648px;
+    background-color: #fff; 
+
+    text-align: center;
+    font: Italic 48px 'Roboto' ;
+    font-weight: 700;
+    color: #AA0601;
+    margin-bottom: 80px;
+    text-decoration: none;
+    line-height: 88px;
+}
+
+
