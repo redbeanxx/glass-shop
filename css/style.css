@@ -58,7 +58,8 @@ img{
     top: 0px;
     left: 0px;
     height: 80px;
-    background: #AA0601 0% 0% no-repeat padding-box;
+    background: #AA0601;
+    
 }
 
 .container_menu_inner{
@@ -69,16 +70,18 @@ img{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 
 .logo{
-    width: 80px;
+    max-width: 80px;
 }
 
 .menu_list{
-    width: 492px;
+    width: 500px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .menu_list_link{
@@ -86,8 +89,7 @@ img{
     font: normal 20px 'Noto Sans TC' ;
     letter-spacing: 0px;
     color: #FFFFFF;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 
 
@@ -98,7 +100,21 @@ img{
     background-size:cover;
     background-position:center center;
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
-    z-index: -1;
+    
+}
+
+@media (max-width: 1200px){
+    .banner{
+        background-position:center;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    }
+}
+
+@media (max-width: 768px){
+    .banner{
+        background-position:center;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    }
 }
 
 .banner_detail{
@@ -107,6 +123,13 @@ img{
     align-items: flex-end;
     padding-right: 16%;
     padding-top: 296px;
+    padding-bottom: 296px;
+}
+
+@media (max-width: 1200px){
+    .banner_detail{
+        padding-right: 36px;
+    }
 }
 
 .banner_detail p{
@@ -135,6 +158,7 @@ img{
     text-align: center;
 }
 
+
  /*intro*/
 
 .intro{
@@ -149,6 +173,10 @@ h2{
     text-align: center;
     line-height: 72px;
     padding-top: 80px;
+    padding-bottom: 48px;
+}
+
+.intro h2{
     padding-bottom: 24px;
 }
 
@@ -192,6 +220,7 @@ h2{
  .classic_product ul{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
  
 .classic_product_item{
@@ -201,26 +230,34 @@ h2{
     margin-left: 24px;
 }
 
-.classic_product img{
+.classic_product_item img{
     margin-bottom: 8px;
     max-width: 416px;
     min-width: 208px;
 }
 
-.classic_product a{
+.classic_product_item a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.classic_product_item p{
     text-align: center;
     font: Italic 48px 'Roboto' ;
     font-weight: 700;
     color: #AA0601;
     margin-bottom: 80px;
-    text-decoration: none;
+   
 }
+
+
 
 /*designer_product*/
 
 .designer_product{
-    height: 608px;
+    min-height: 608px;
     background-size:cover;
+    background-position:center center;
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
     z-index: -1;
 }
@@ -232,6 +269,7 @@ h2{
 .designer_product ul{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .designer_product_item img{
@@ -240,17 +278,254 @@ h2{
 }
 
 .designer_product_item a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.designer_product_item p{
     display: block;
     max-width: 648px;
     background-color: #fff; 
+    height: 88px;
 
     text-align: center;
     font: Italic 48px 'Roboto' ;
     font-weight: 700;
     color: #AA0601;
     margin-bottom: 80px;
-    text-decoration: none;
     line-height: 88px;
 }
 
+/*guest_recommend*/
+.guest_recommend ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
 
+.guest_recommend_item{
+    background: #ffffff 0% 0% no-repeat padding-box;
+    max-width: 306px;
+    height: 511px;
+    box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-bottom: 80px;
+}
+
+.guest_name{
+    font: normal 16px 'Noto Sans TC' ;
+    color: #000;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.guest_comment{
+    font: normal 16px 'Noto Sans TC' ;
+    color: #000;
+    line-height: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.guest_date{
+    font: normal 14px 'Noto Sans TC' ;
+    color: #707070;
+    line-height: 21px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 72px;
+}
+
+/*contact_us*/
+
+
+
+.contact_us{
+    background-color: #FBF2F2;
+    background-size:cover;
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.contact_us p{
+    max-width: 636px;
+    font: normal 20px 'Noto Sans TC';
+    line-height: 30px;
+    margin-bottom: 24px;
+
+}
+
+input[type="text"],
+input[type="submit"],
+textarea[type="text"]{
+    display:block;
+    margin-bottom: 16px;
+    background-color: #FBF2F2;
+}
+
+.contact_form{
+    font: normal 16px 'Noto Sans TC';
+    line-height: 24px;
+}
+
+input {
+    outline-style: none ;
+    border: 1px solid #000;
+    padding: 6px;
+    width: 636px;
+}
+
+textarea {
+    outline-style: none ;
+    border: 1px solid #000;
+    padding: 6px;
+    width: 636px;
+    height: 136px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]+span {
+    display: inline-block;
+    padding-left: 26px;
+    line-height: 20px;
+    background: url(https://i.imgur.com/bZM5Itd.png) no-repeat left top;
+    user-select: none;
+}
+
+input[type="checkbox"]:checked+span {
+    background: url(https://i.imgur.com/JWm4WKA.png) no-repeat left top;
+}
+
+input[type="submit"]{
+    width: 416px;
+    height: 56px;
+    border: 0px;
+    background-color: #AA0601;
+    font: normal 20px 'Noto Sans TC' ;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 41px;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 90px;
+}
+
+/*--footer--*/
+
+footer{
+    min-height: 353px;
+    background-color: #AA0601;
+}
+
+.footer_container{
+    max-width: 67%;
+    margin: 0 auto;
+}
+
+/*footer_top*/
+.footer_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    
+}
+
+.footer_list{
+    width: 464px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer_list_link{
+    text-align: left;
+    font: normal 16px 'Noto Sans TC' ;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer_social_media_link{
+    text-decoration: none;
+}
+
+.footer_social_media_link img{
+    max-width: 48px;
+}
+
+.footer_social_media{
+    width: 208px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+/*footer_middle*/
+.footer_middle{
+    margin-bottom: 32px;
+}
+
+.footer_contact_item{
+    display: flex;
+    justify-content: start;
+    font: normal 36px 'Noto Sans TC' ;
+    color: #fff;
+    line-height: 54px;
+
+}
+
+.footer_contact_item span{
+    margin-right: 16px;
+}
+
+.material-symbols-outlined{
+    font-size: 48px;
+}
+
+/*footer_bottom*/
+
+.footer_bottom{
+    border-top: 1px solid #fff;
+}
+
+.legal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding-bottom: 32px;
+}
+
+.footer_bottom p{
+    font: normal 16px 'Noto Sans TC' ;
+    color: #FFFFFF;
+}
+
+.footer_bottom ul{
+    width: 174px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.legal_detail{
+    font: normal 16px 'Noto Sans TC' ;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 21px;
+}
