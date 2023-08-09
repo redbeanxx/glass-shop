@@ -59,18 +59,18 @@ img{
     left: 0px;
     height: 80px;
     background: #AA0601;
-    
 }
 
 .container_menu_inner{
     margin: 0 auto;
-    max-width: 67.5%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 24px;
+    padding-left: 16%;
+    padding-right: 16%;
 }
 
 .logo{
@@ -92,6 +92,13 @@ img{
     text-decoration: none; 
 }
 
+@media (max-width: 1200px){
+    .container_menu_inner{
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+
 
 /*-- main --*/
 /*banner*/
@@ -100,21 +107,6 @@ img{
     background-size:cover;
     background-position:center center;
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
-    
-}
-
-@media (max-width: 1200px){
-    .banner{
-        background-position:center;
-        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
-    }
-}
-
-@media (max-width: 768px){
-    .banner{
-        background-position:center;
-        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
-    }
 }
 
 .banner_detail{
@@ -124,12 +116,6 @@ img{
     padding-right: 16%;
     padding-top: 296px;
     padding-bottom: 296px;
-}
-
-@media (max-width: 1200px){
-    .banner_detail{
-        padding-right: 36px;
-    }
 }
 
 .banner_detail p{
@@ -158,8 +144,19 @@ img{
     text-align: center;
 }
 
+@media (max-width: 1200px){
+    .banner{
+        background-position:center;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    }
 
- /*intro*/
+    .banner_detail{
+        padding-right: 36px;
+    }
+}
+
+
+/*intro*/
 
 .intro{
     background-color: #FBF2F2;
@@ -176,22 +173,31 @@ h2{
     padding-bottom: 48px;
 }
 
-.intro h2{
-    padding-bottom: 24px;
+@media (max-width:767px)
+{
+    h2{
+        font: bold 24px 'Noto Sans TC' ;
+        line-height: 36px;
+    }
 }
+
 
 .intro ul{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .intro_item{
     width: 306px;
     display: flex;
+
     flex-direction: column;
     align-items: center;
     margin-left: 24px;
 }
+
 
 .intro_item img{
     text-align: center;
@@ -214,13 +220,20 @@ h2{
     margin-bottom: 80px;
 }
 
+@media (max-width:1200px){
+    .intro_item{
+        width: 336px;
+    }
+}
 
- /*classic_product*/
+
+/*classic_product*/
 
  .classic_product ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 80px;
 }
  
 .classic_product_item{
@@ -228,6 +241,7 @@ h2{
     flex-direction: column;
     align-items: center;
     margin-left: 24px;
+    margin-bottom: 24px;
 }
 
 .classic_product_item img{
@@ -246,11 +260,18 @@ h2{
     font: Italic 48px 'Roboto' ;
     font-weight: 700;
     color: #AA0601;
-    margin-bottom: 80px;
-   
+    
 }
 
+@media (max-width:1200px){
+    .classic_product_item img{
+        max-width: 336px;
+    }
 
+    .classic_product ul{
+        flex-direction: column;
+    }
+}
 
 /*designer_product*/
 
@@ -269,12 +290,20 @@ h2{
 .designer_product ul{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    padding-bottom: 80px;
 }
 
-.designer_product_item img{
+.designer_product_1-L,
+.designer_product_2-L {
     display:block;
     max-width: 648px;
+}
+
+.designer_product_1-sm,
+.designer_product_2-sm{
+    display: none;
 }
 
 .designer_product_item a{
@@ -287,13 +316,44 @@ h2{
     max-width: 648px;
     background-color: #fff; 
     height: 88px;
-
+    
     text-align: center;
     font: Italic 48px 'Roboto' ;
     font-weight: 700;
     color: #AA0601;
-    margin-bottom: 80px;
     line-height: 88px;
+    margin-bottom: 24px;
+}
+
+@media (max-width:1200px){
+
+    .designer_product{
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+    }
+
+    .designer_product_1-L,
+    .designer_product_2-L {
+        max-width: 696px;
+    }
+
+    .designer_product_item p{
+        max-width: 696px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .designer_product_1-L,
+    .designer_product_2-L {
+        display: none;
+    }
+
+    .designer_product_1-sm,
+    .designer_product_2-sm{
+        display: block;
+        max-width: 348px;
+    }
 }
 
 /*guest_recommend*/
@@ -301,6 +361,8 @@ h2{
     display: flex;
     justify-content: center;
     flex-wrap: wrap; 
+    margin-bottom: 80px;
+    gap:24px
 }
 
 .guest_recommend_item{
@@ -313,9 +375,9 @@ h2{
     
     display: flex;
     flex-direction: column;
-    margin-left: 24px;
-    margin-bottom: 80px;
+    justify-content: space-between;
 }
+ 
 
 .guest_name{
     font: normal 16px 'Noto Sans TC' ;
@@ -341,8 +403,16 @@ h2{
     line-height: 21px;
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 72px;
+    margin-bottom: 16px;
 }
+
+@media(max-width:1200px){
+    .guest_recommend_item{
+        max-width: 336px;
+    }
+}
+
+
 
 /*contact_us*/
 
@@ -358,15 +428,18 @@ h2{
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    
 }
 
 .contact_us p{
     max-width: 636px;
+   
     font: normal 20px 'Noto Sans TC';
     line-height: 30px;
     margin-bottom: 24px;
 
 }
+
 
 input[type="text"],
 input[type="submit"],
@@ -381,11 +454,13 @@ textarea[type="text"]{
     line-height: 24px;
 }
 
+
 input {
     outline-style: none ;
     border: 1px solid #000;
     padding: 6px;
     width: 636px;
+    margin-top: 8px;
 }
 
 textarea {
@@ -394,6 +469,7 @@ textarea {
     padding: 6px;
     width: 636px;
     height: 136px;
+    margin-top: 8px;
 }
 
 input[type="checkbox"] {
@@ -411,8 +487,11 @@ input[type="checkbox"]:checked+span {
     background: url(https://i.imgur.com/JWm4WKA.png) no-repeat left top;
 }
 
+
+
+
 input[type="submit"]{
-    width: 416px;
+    max-width: 416px;
     height: 56px;
     border: 0px;
     background-color: #AA0601;
@@ -425,6 +504,44 @@ input[type="submit"]{
     margin-bottom: 90px;
 }
 
+@media(max-width:1200px){
+    .contact_us p{
+        max-width: 576px;
+        font: normal 16px 'Noto Sans TC';
+        line-height: 24px;
+    }
+
+    input[type="submit"]{
+        max-width: 336px;
+        font: normal 16px 'Noto Sans TC' ;
+        line-height: 24px;
+    }
+
+    input,
+    textarea {
+        max-width: 576px;
+    }
+}
+
+@media(max-width:767px){
+    .contact_us p{
+        max-width: 348px;
+    }
+
+    input[type="submit"]{
+        max-width: 348px;
+        margin-bottom: 40px;
+    }
+
+    input,
+    textarea {
+        max-width: 348px;
+    }
+}
+
+
+
+
 /*--footer--*/
 
 footer{
@@ -433,8 +550,23 @@ footer{
 }
 
 .footer_container{
-    max-width: 67%;
+    padding-left: 16%;
+    padding-right: 16%;
     margin: 0 auto;
+}
+
+@media (max-width: 1200px){
+    .footer_container{
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+
+@media (max-width: 767px){
+    .footer_container{
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 /*footer_top*/
@@ -442,9 +574,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding-top: 60px;
-    
 }
 
 .footer_list{
@@ -476,6 +606,36 @@ footer{
     padding-bottom: 40px;
 }
 
+@media (max-width: 1200px){
+    .footer_social_media_link img{
+        max-width: 40px;
+    }
+    
+    .footer_social_media{
+        width: 144px;
+    }
+}
+
+@media (max-width: 767px){
+    .footer_social_media_link img{
+        max-width: 24px;
+    }
+
+    .footer_list{
+        display: none;
+    }
+
+    .footer_social_media{
+        width: 88px;
+    }
+
+    .footer_top{
+        padding-top: 24px;
+        justify-content: flex-end;
+    }
+}
+
+
 /*footer_middle*/
 .footer_middle{
     margin-bottom: 32px;
@@ -487,7 +647,7 @@ footer{
     font: normal 36px 'Noto Sans TC' ;
     color: #fff;
     line-height: 54px;
-
+    margin-bottom: 8px;
 }
 
 .footer_contact_item span{
@@ -497,6 +657,17 @@ footer{
 .material-symbols-outlined{
     font-size: 48px;
 }
+
+@media (max-width: 767px){
+    .footer_contact_item{
+        font: normal 16px 'Noto Sans TC' ;
+    }
+
+    .material-symbols-outlined{
+        font-size: 24px;
+    }
+}
+
 
 /*footer_bottom*/
 
@@ -509,6 +680,7 @@ footer{
     justify-content: space-between;
     margin-top: 32px;
     padding-bottom: 32px;
+    font: normal 16px 'Roboto'
 }
 
 .footer_bottom p{
@@ -527,5 +699,19 @@ footer{
     font: normal 16px 'Noto Sans TC' ;
     color: #FFFFFF;
     text-decoration: none;
-    line-height: 21px;
+    line-height: 24px;
+}
+
+@media (max-width: 767px){
+
+    .footer_bottom ul{
+        width: 80px;
+    }
+    
+    .legal{
+        flex-wrap: wrap;
+        margin-top: 16px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
