@@ -126,7 +126,6 @@ img{
         
     }
 
-  
 
     .menu_list_link{
         display: block;
@@ -140,14 +139,11 @@ img{
         line-height: 41px;
         text-align: center;
     }
-
     .logo{
         max-width: 80px;
         margin-left: 15px;
         margin-bottom: 15px;
     }
-    
-
     
 }
 
